@@ -35,14 +35,14 @@ const Home = ({ searchQuery }) => {
 
   const storedTasks = async () => {
     const res = await axios.get(
-      `http://localhost:5000/api/user/getTasks/${id}`
+      `https://merntaskbackend-zzhg.onrender.com/api/user/getTasks/${id}`
     );
     setTasks(res.data);
   };
 
   const handleAddTask = async (newTask) => {
     try {
-      await axios.post("http://localhost:5000/api/user/addTask", {
+      await axios.post("https://merntaskbackend-zzhg.onrender.com/api/user/addTask", {
         title: newTask.title,
         description: newTask.description,
         dueDate: newTask.dueDate,
@@ -67,7 +67,7 @@ const Home = ({ searchQuery }) => {
       });
 
       await axios.put(
-        `http://localhost:5000/api/user/updateTask/${taskId}`,
+        `https://merntaskbackend-zzhg.onrender.com/api/user/updateTask/${taskId}`,
         body,
         config
       );
@@ -96,7 +96,7 @@ const Home = ({ searchQuery }) => {
         },
       };
       await axios
-        .delete(`http://localhost:5000/api/user/deleteTask/${id}`, config)
+        .delete(`https://merntaskbackend-zzhg.onrender.com/api/user/deleteTask/${id}`, config)
         .then((res) => {
           toast.success(res.data.msg);
         });
