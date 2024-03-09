@@ -36,7 +36,7 @@ const Signup = () => {
         // Simulating a delay for demo purposes (remove this in a real application)
         await new Promise(resolve => setTimeout(resolve, 1000));
         try {
-            await axios.post("http://localhost:5000/api/user/register",{username:formData.username,email:formData.email,password:formData.password}).then((res)=>{
+            await axios.post("https://merntaskbackend-zzhg.onrender.com/api/user/register",{username:formData.username,email:formData.email,password:formData.password}).then((res)=>{
               console.log(res);
               toast.info(res.data.msg);
               navigate('/signin');
