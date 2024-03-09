@@ -1,0 +1,40 @@
+.add-task-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .plusb{
+    margin-bottom: 10%;
+  }
+  
+  .add-task-btn.open {
+    transform: rotate(45deg);
+    background-color: rgb(255, 0, 0);
+  }
+  
+  .add-task-form {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease;
+  }
+  
+  .add-task-form.open {
+    max-height: 500px;
+  }
+  
